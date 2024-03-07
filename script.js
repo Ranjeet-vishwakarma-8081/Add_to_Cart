@@ -10,7 +10,6 @@ const app = initializeApp(appSetting);
 const database = getDatabase(app);
 const shoppingListInDB = ref(database, "ShoppingList");
 
-
 const inputFieldEle = document.getElementById("input-field");
 const addButtonEle = document.getElementById("add-btn");
 const listEle = document.getElementById("list");
@@ -34,7 +33,6 @@ onValue(shoppingListInDB, function (shoppingList) {
             let currentShoppingList = shoppingListArray[i];
             addElemToDom(currentShoppingList);
         }
-        console.log(shoppingListArray);
     } else {
         liFieldBlank();
 
